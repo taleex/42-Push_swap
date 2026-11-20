@@ -31,8 +31,8 @@
 ### 3. Stack operations (operations.c, or split into several files)
 - [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
 - [ ] Push: `pa`, `pb` - **jorgferr**
-- [ ] Rotate: `ra`, `rb`, `rr`
-- [ ] Reverse rotate: `rra`, `rrb`, `rrr`
+- [ ] Rotate: `ra`, `rb`, `rr` **luisdos**
+- [ ] Reverse rotate: `rra`, `rrb`, `rrr` **luisdos**
 - [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
 
 ### 4. Disorder metric
