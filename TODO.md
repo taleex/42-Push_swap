@@ -1,110 +1,102 @@
+# push_swap
+
 ## Active
+- [ ] Agree on the structs in push_swap.h (everything depends on this) - both
 
 ## Pending
-- [ ] Create Operations
-
+- [ ] Create operations file
 
 ## Done
 
 ---
 
-### Operations
-[ ] Create a file to manage the operations
+## Tasks
 
-### Input handling
+### 0. Setup
+- [ ] push_swap.h (node struct, stack struct, prototypes)
+- [ ] Makefile (NAME, all, clean, fclean, re, builds libft too)
 
+### 1. Input handling
+- [ ] Error function: prints "Error\n" and exits
+- [ ] Check each arg is a valid integer
+- [ ] Check range (INT_MIN to INT_MAX)
+- [ ] Check duplicates
+- [ ] Parse optional flag (--simple, --medium, --complex, --adaptive); default is adaptive
 
-### Stack initialization
+### 2. Stack initialization
+- [ ] Build stack A from the arguments
+- [ ] Stack B starts empty
+- [ ] Free everything at exit (also on error)
 
-### Stack operations
-- [ ] Swap: `sa`, `sb`, `ss`
-- [ ] Push: `pa`, `pb`
+### 3. Stack operations (operations.c, or split into several files)
+- [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
+- [ ] Push: `pa`, `pb` - **jorgferr**
 - [ ] Rotate: `ra`, `rb`, `rr`
 - [ ] Reverse rotate: `rra`, `rrb`, `rrr`
+- [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
 
-### Sorting algorithm
+### 4. Disorder metric
+- [ ] Function that computes disorder of stack A (before any move)
+- [ ] Test: sorted gives 0, reversed gives 1
 
-----
+### 5. Sorting algorithms
+- [ ] Simple, O(n²): bubble sort adaptation
+- [ ] Medium, O(n√n): chunk-based sorting (√n chunks)
+- [ ] Complex, O(n log n): radix sort (LSD or MSD)
+- [ ] Adaptive: picks the strategy from the disorder
+  - disorder < 0.2 -> simple
+  - 0.2 <= disorder < 0.5 -> medium
+  - disorder >= 0.5 -> complex
 
-### NOTES:
-
-Initially:
-**A Stack** contains: random negative or prositive numbers without duplicates;
-**B Stack** is empty;
-
-Goal:
-Order in ascedent the numbers at **stack A**
-
-Operations that we can use:
-
-- [ ] Swap: `sa`, `sb`, `ss`
-- [ ] Push: `pa`, `pb`
-- [ ] Rotate: `ra`, `rb`, `rr`
-- [ ] Reverse rotate: `rra`, `rrb`, `rrr`
-
-  Have a brain file to manage this stacks plus a file to contain these operations (IF NEEDED).
-
-These operations must be saved somewhere, because we need to return the sequence in the end of the program.
-
-----
-
-Disorder metric:
-
-Receives stack a in a order, and the program check how much disorder it is, when 0 is completly order, and 1 disorder. and this is to rank the disorder. when more close to 1 more disorder it is.
-
-we might need to use a float. we need to mesure the disorder before doing any movement.
-
-sum total errors and dived by the total of numbers.
-
-*If the numbers are already in the right order, the disorder is 0.*
-
-*hey are in the worst possible order, the disorder is 1.*
+### 6. Delivery
+- [ ] README: explain the algorithms and the adaptive design
+- [ ] Test with the checker: `ARG="4 67 3 87 23"; ./push_swap --complex $ARG | ./checker_linux $ARG`
+- [ ] Norm check
 
 ---
 
-Required Strategies:
+## NOTES
 
-1 - Simple algorithm (O(n2))(AT LEAST ONE)
-	• Bubble sort adaptation (choosed)
+### Basics
+- Stack A starts with random negative or positive numbers, no duplicates.
+- Stack B starts empty.
+- Goal: sort stack A in ascending order.
+- Operations allowed:
+  - Swap: `sa`, `sb`, `ss`
+  - Push: `pa`, `pb`
+  - Rotate: `ra`, `rb`, `rr`
+  - Reverse rotate: `rra`, `rrb`, `rrr`
+- A "brain" file manages the stacks, plus a file for the operations if needed.
+- Operations must be recorded/output, since the sequence is the result of the program.
 
-2 - Medium algorithm (o(n^n)) (AT LEAST ONE)
-	- Chunk-based sorting (divide into √n chunks)
+### Disorder metric
+- Receives stack A and measures how unordered it is, before any move.
+- 0 = completely ordered, 1 = worst possible order. Closer to 1 means more disorder.
+- Needs a float (or a fraction compared with integers).
+- Already in the right order -> disorder is 0.
+- Worst possible order -> disorder is 1.
+- Calculation: count the errors and divide (see the correction below).
 
-3 - Complex algorithm (O(n log n)) (AT LEAST ONE)
-	- Radix sort adaptation (LSD or MSD)
+### Required strategies
+1. Simple, O(n²) (at least one): bubble sort adaptation (chosen)
+2. Medium, O(n√n) (at least one): chunk-based sorting (√n chunks)
+3. Complex, O(n log n) (at least one): radix sort adaptation (LSD or MSD)
+4. Custom adaptive algorithm (our design):
+   - Low disorder: disorder < 0.2 -> must run in O(n²)
+   - Medium disorder: 0.2 <= disorder < 0.5 -> must run in O(n√n)
+   - High disorder: disorder >= 0.5 -> must run in O(n log n)
+- This design must be explained in the README.
 
-4. Custom adaptive algorithm (learner’s design)
-	- Low disorder: if disorder < 0.2, your chosen method must run in O(n2) time
-	- Medium disorder: if 0.2 ≤ disorder < 0.5, your chosen method must run in O(n√n) time.
-	- High disorder: if disorder ≥ 0.5, your chosen method must run in O(n log n) time.
-
-In this step we must explain in the readme file
-
----
-
-**Program name:**push_swap
-files we can submite: Makefile, *.h, *.c
-**Makefile:** NAME, all, clean, fclean, re
-**Arguments** stack a: A list of integers (passed by argc & argv)
-**External Function:** read, write, malloc, free, exit
-• ft_printf or any equivalent
-YOU coded
-**Description** Sort stacks
-
-MAKEFILE MUST:
-
-An optional strategy selector:
-**--simple** Forces the use of your O(n2) algorithm.
-**--medium** Forces the use of your O(n√n)algorithm.
-**--complex** Forces the use of your O(n log n) algorithm.
-**--adaptive**Forces the use of your adaptive algorithm based on disorder.
-This is the default behavior if no selector is given.
-
-e.g: *$> ARG="4 67 3 87 23"; ./push_swap --complex $ARG | ./checker_linux $ARG*
-
-Must have a function for error handling.
-
-"Error \n"
-
-for example: arguments that are not integers, integers outside the
-valid range, or duplicate values.
+### Program rules
+- Program name: push_swap
+- Submit: Makefile, *.h, *.c
+- Makefile rules: NAME, all, clean, fclean, re
+- Arguments: list of integers for stack A (argc and argv)
+- External functions: read, write, malloc, free, exit
+- ft_printf or any equivalent that we coded is allowed
+- Optional strategy selector:
+  - `--simple`: forces the O(n²) algorithm
+  - `--medium`: forces the O(n√n) algorithm
+  - `--complex`: forces the O(n log n) algorithm
+  - `--adaptive`: adaptive algorithm based on disorder (default if no selector)
+- Must have an error handling function that prints "Error\n" for non-integers, out-of-range integers, and duplicates.
