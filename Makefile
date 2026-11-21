@@ -6,7 +6,7 @@
 #    By: username <username@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/21 12:04:01 by username          #+#    #+#              #
-#    Updated: 2026/11/21 12:04:03 by username         ###   ########.fr        #
+#    Updated: 2026/11/21 19:08:59 by username         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RM = rm -f
 LIBFT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRC = src/push_swap.c src/ft_swap.c
+SRC = src/push_swap.c src/ft_swap.c src/ft_push.c src/utils.c
 
 OBJ = $(SRC:.c=.o)
 
