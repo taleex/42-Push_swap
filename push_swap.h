@@ -13,7 +13,8 @@
 #ifndef PUSH_SWAP
 #define PUSH_SWAP
 
-#include "ft_printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
+# include "ft_printf/libft/libft.h"
 
 typedef struct s_node
 {
@@ -29,6 +30,11 @@ typedef struct s_stack
 	t_node	*top;
 	int	size;
 } 	t_stack;
+//swap functions
+void	ft_swap_top(t_stack *stack);
+void	sa(t_stack *a);
+void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
 //rotate and reverse rotate functions.
 void    ra(t_stack *a);
 void    rb(t_stack *b);

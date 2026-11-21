@@ -12,32 +12,41 @@
 
 #include "push_swap.h"
 
-void ft_swap_top(t_stack **stack)
+void	ft_swap_top(t_stack *stack)
 {
-	t_stack *first;
-	t_stack *second;
+	t_node	*first;
+	t_node	*second;
 
-	if (!*stack || !stack)
+	if (!stack || stack->size < 2)
 		return ;
-	first = *stack;
+	first = stack->top;
 	second = first->next;
 	first->next = second->next;
+	if (first->next)
+		first->next->prev = first;
+	else
+		stack->bottom = first;
+	second->prev = NULL;
 	second->next = first;
-	*stack = second;
+	first->prev = second;
+	stack->top = second;
 }
 
-void sa(t_stack **a)
+void	sa(t_stack *a)
 {
 	ft_swap_top(a);
-	ft_printf("sa");
-}
-void sb(t_stack **b)
-{
-	ft_swap_top(b);
+	ft_putendl_fd("sa", 1);
 }
 
-void ss(t_stack **a, t_stack **b)
+void	sb(t_stack *b)
+{
+	ft_swap_top(b);
+	ft_putendl_fd("sb", 1);
+}
+
+void	ss(t_stack *a, t_stack *b)
 {
 	ft_swap_top(a);
 	ft_swap_top(b);
+	ft_putendl_fd("ss", 1);
 }
