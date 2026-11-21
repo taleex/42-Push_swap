@@ -4,17 +4,18 @@
 - [ ] Agree on the structs in push_swap.h (everything depends on this) - both
 
 ## Pending
-- [ ] Create operations file
+- [ ] 3. Stack operations
+- [ ] 1. Input handling
 
 ## Done
-- [x] Makefile integration with ft_printf + libft -> **jorgferr**
+- [x] 0. Setup -> **jorgferr**
 ---
 
 ## Tasks
 
 ### 0. Setup
-- [ ] push_swap.h (node struct, stack struct, prototypes)
-- [ ] Makefile (NAME, all, clean, fclean, re, builds libft too)
+- [x] Basic setup of push_swap.h (node struct, stack struct, prototypes) **jorgferr**
+- [x] Makefile (NAME, all, clean, fclean, re, builds libft too) **jorgferr**
 
 ### 1. Input handling
 - [ ] Error function: prints "Error\n" and exits
@@ -29,8 +30,8 @@
 - [ ] Free everything at exit (also on error)
 
 ### 3. Stack operations (operations.c, or split into several files)
-- [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
-- [ ] Push: `pa`, `pb` - **jorgferr**
+- [x] Swap: `sa`, `sb`, `ss` - **jorgferr**
+- [x] Push: `pa`, `pb` - **jorgferr**
 - [ ] Rotate: `ra`, `rb`, `rr`
 - [ ] Reverse rotate: `rra`, `rrb`, `rrr`
 - [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
