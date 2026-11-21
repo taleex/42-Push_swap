@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 18:36:12 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 19:04:47 by username         ###   ########.fr       */
+/*   Updated: 2026/11/21 19:06:18 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ void	ss(t_stack **a, t_stack **b);
 
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);
+
 #endif
