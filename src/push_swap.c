@@ -13,15 +13,34 @@
 
 #include "../push_swap.h"
 
+static t_stack	*new_node(int value)
+{
+	t_stack	*node;
+
+	node = malloc(sizeof(t_stack));
+	if (!node)
+		return (NULL);
+	node->value = value;
+	node->next = NULL;
+	return (node);
+}
+
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 1;
 	if (argc > 1)
 	{
+
 		while (argv[i])
 		{
+			j = 0;
+			while (argv[i][j])
+			{
+				j++;
+			}
 			i++;
 		}
 	}

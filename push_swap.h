@@ -6,19 +6,23 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 16:42:08 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 12:07:52 by username         ###   ########.fr       */
+/*   Updated: 2026/11/21 18:30:29 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-#define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include "ft_printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 
 typedef struct s_stack
 {
 	int				value;
 	struct s_stack	*next;
 }					t_stack;
+
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
 
 #endif
