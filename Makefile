@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: username <username@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/11/20 14:32:12 by username          #+#    #+#              #
-#    Updated: 2026/11/20 16:45:55 by username         ###   ########.fr        #
+#    Created: 2026/11/21 12:04:01 by username          #+#    #+#              #
+#    Updated: 2026/11/21 12:04:03 by username         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,33 +14,33 @@ NAME = push_swap
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I. -I$(LIBFT_DIR)
+INCLUDES = -I. -I$(LIBFT_PRINTF_DIR) -I$(LIBFT_PRINTF_DIR)/libft
 RM = rm -f
 
-LIBFT_DIR = ./libft
-LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_PRINTF_DIR = ./ft_printf
+LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRC = src/push_swap.c
+SRC = src/push_swap.c src/ft_swap.c
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJ) $(LIBFTPRINTF)
+	$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFTPRINTF) -o $(NAME)
 
-$(LIBFT):
-	make -C $(LIBFT_DIR)
+$(LIBFTPRINTF):
+	$(MAKE) -C $(LIBFT_PRINTF_DIR)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	make clean -C $(LIBFT_DIR)
+	$(MAKE) clean -C $(LIBFT_PRINTF_DIR)
 	$(RM) $(OBJ)
 
 fclean: clean
-	make fclean -C $(LIBFT_DIR)
+	$(MAKE) fclean -C $(LIBFT_PRINTF_DIR)
 	$(RM) $(NAME)
 
 re: fclean all

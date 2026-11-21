@@ -22,7 +22,6 @@ int	main(int argc, char **argv)
 	{
 		while (argv[i])
 		{
-			ft_valid()
 			i++;
 		}
 	}

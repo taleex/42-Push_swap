@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/19 13:50:14 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/03 18:58:25 by username         ###   ########.fr       */
+/*   Created: 2026/10/19 15:17:33 by jorgferr          #+#    #+#             */
+/*   Updated: 2026/11/13 10:28:43 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t				len;
-	const unsigned char	*str1;
-	const unsigned char	*str2;
+	size_t	len;
 
 	len = 0;
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
 	while (len < n)
 	{
-		if (str1[len] != str2[len])
-			return (str1[len] - str2[len]);
+		if (s1[len] != s2[len])
+			return ((unsigned char)s1[len] - (unsigned char)s2[len]);
+		if (s1[len] == '\0')
+			return (0);
 		len++;
 	}
 	return (0);

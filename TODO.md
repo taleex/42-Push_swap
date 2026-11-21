@@ -7,7 +7,7 @@
 - [ ] Create operations file
 
 ## Done
-
+- [x] Makefile integration with ft_printf + libft -> **jorgferr**
 ---
 
 ## Tasks

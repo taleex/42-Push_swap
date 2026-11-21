@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_prtstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/19 15:21:10 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/01 16:00:39 by username         ###   ########.fr       */
+/*   Created: 2026/11/13 10:21:14 by jorgferr          #+#    #+#             */
+/*   Updated: 2026/11/13 10:21:16 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	len;
+#include "../ft_printf.h"
 
-	len = 0;
-	while (s[len])
-		len++;
-	while (len >= 0)
-	{
-		if (s[len] == (char)c)
-			return ((char *)s + len);
-		len--;
-	}
-	return (0);
+int	ft_prtstr(char *str)
+{
+	if (!str)
+		return (write(1, "(null)", 6));
+	else
+		return (write(1, str, ft_strlen(str)));
 }
