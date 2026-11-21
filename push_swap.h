@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 18:36:12 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 18:37:17 by username         ###   ########.fr       */
+/*   Updated: 2026/11/21 19:04:47 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+t_stack	*new_node(int value);
+
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
 
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
 #endif

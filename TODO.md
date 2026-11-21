@@ -8,13 +8,14 @@
 
 ## Done
 - [x] Makefile integration with ft_printf + libft -> **jorgferr**
+-
 ---
 
 ## Tasks
 
 ### 0. Setup
-- [ ] push_swap.h (node struct, stack struct, prototypes)
-- [ ] Makefile (NAME, all, clean, fclean, re, builds libft too)
+- [x] Basic setup of push_swap.h (node struct, stack struct, prototypes) **jorgferr**
+- [x] Makefile (NAME, all, clean, fclean, re, builds libft too) **jorgferr**
 
 ### 1. Input handling
 - [ ] Error function: prints "Error\n" and exits
@@ -29,7 +30,7 @@
 - [ ] Free everything at exit (also on error)
 
 ### 3. Stack operations (operations.c, or split into several files)
-- [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
+- [x] Swap: `sa`, `sb`, `ss` - **jorgferr**
 - [ ] Push: `pa`, `pb` - **jorgferr**
 - [ ] Rotate: `ra`, `rb`, `rr`
 - [ ] Reverse rotate: `rra`, `rrb`, `rrr`
