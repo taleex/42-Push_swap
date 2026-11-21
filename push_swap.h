@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/20 16:42:08 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 18:30:29 by username         ###   ########.fr       */
+/*   Created: 2026/11/21 18:36:12 by username          #+#    #+#             */
+/*   Updated: 2026/11/21 18:37:17 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "ft_printf/ft_printf.h"
+# include <stdlib.h>
 
 typedef struct s_stack
 {
