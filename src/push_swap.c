@@ -6,29 +6,30 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 18:35:57 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 19:10:28 by username         ###   ########.fr       */
+/*   Updated: 2026/11/21 19:43:07 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// int	main(int argc, char **argv)
-// {
-// 	int	i;
-// 	int	j;
+int	main(int argc, char **argv)
+{
+	int	i;
+	int	j;
 
-// 	i = 1;
-// 	if (argc > 1)
-// 	{
-// 		while (argv[i])
-// 		{
-// 			j = 0;
-// 			while (argv[i][j])
-// 			{
-// 				j++;
-// 			}
-// 			i++;
-// 		}
-// 	}
-// 	return (0);
-// }
+	i = 1;
+	if (argc > 1)
+	{
+		while (argv[i])
+		{
+			j = 0;
+			while (argv[i][j])
+			{
+				ft_parse_check(argv[i][j]);
+				j++;
+			}
+			i++;
+		}
+	}
+	return (0);
+}
