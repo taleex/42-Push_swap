@@ -20,7 +20,9 @@ RM = rm -f
 LIBFT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRC = src/push_swap.c src/ft_swap.c
+SRC = src/push_swap.c src/ft_swap.c src/ft_error.c src/ft_parse_args.c \
+src/ft_reverse_rotate.c src/ft_rotate.c src/ft_stack_build.c \
+src/ft_stack_helpers.c src/ft_strategy.c
 
 OBJ = $(SRC:.c=.o)
 

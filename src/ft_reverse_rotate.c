@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-static void reverse_rotate(t_stack *stack)
+static void ft_reverse_rotate(t_stack *stack)
 {
     t_node  *last;
 
@@ -27,21 +27,21 @@ static void reverse_rotate(t_stack *stack)
     stack->top = last;
 }
 
-void    rra(t_stack *a)
+void    ft_rra(t_stack *a)
 {
-    reverse_rotate(a);
+    ft_reverse_rotate(a);
     ft_putendl_fd("rra", 1);
 }
 
-void    rrb(t_stack *b)
+void    ft_rrb(t_stack *b)
 {
-    reverse_rotate(b);
+    ft_reverse_rotate(b);
     ft_putendl_fd("rrb", 1);
 }
 
-void    rrr(t_stack *a, t_stack *b)
+void    ft_rrr(t_stack *a, t_stack *b)
 {
-    reverse_rotate(a);
-    reverse_rotate(b);
+    ft_reverse_rotate(a);
+    ft_reverse_rotate(b);
     ft_putendl_fd("rrr", 1);
 }

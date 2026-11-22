@@ -10,27 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
-{
-	int	len;
-	int	flag;
-	int	res;
+#include "libft.h"
+#include <limits.h>
 
-	len = 0;
-	flag = 1;
-	res = 0;
-	while ((nptr[len] == ' ') || (nptr[len] >= 9 && 13 >= nptr[len]))
-		len++;
-	if (nptr[len] == '-' || nptr[len] == '+')
+static int	ft_parse_digits(const char *str, int sign)
+{
+	long	result;
+	int		digit;
+
+	result = 0;
+	while (*str >= '0' && *str <= '9')
 	{
-		if (nptr[len] == '-')
-			flag = -1;
-		len++;
+		digit = *str - '0';
+		if (result > (LONG_MAX - digit) / 10)
+		{
+			if (sign < 0)
+				return ((int)LONG_MIN);
+			return ((int)LONG_MAX);
+		}
+		result = result * 10 + digit;
+		str++;
 	}
-	while (nptr[len] >= '0' && '9' >= nptr[len])
+	return ((int)(result * sign));
+}
+
+int	ft_atoi(const char *str)
+{
+	size_t	i;
+	int		sign;
+
+	i = 0;
+	sign = 1;
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if ((str[i] == '+') || (str[i] == '-'))
 	{
-		res = (res * 10) + nptr[len] - '0';
-		len++;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	return (res * flag);
+	return (ft_parse_digits(str + i, sign));
 }
