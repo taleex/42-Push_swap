@@ -38,8 +38,8 @@
 - [x] Reverse rotate: `rra`, `rrb`, `rrr` **luisdos**
 - [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
 
-### 4. Disorder metric - **jorgferr** -> im currently on this task
-- [ ] Function that computes disorder of stack A (before any move)
+### 4. Disorder metric
+- [x] Function that computes disorder of stack A (before any move)
 - [ ] Test: sorted gives 0, reversed gives 1
 
 ### 5. Sorting algorithms
