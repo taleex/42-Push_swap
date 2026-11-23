@@ -6,7 +6,7 @@
 #    By: username <username@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/21 12:04:01 by username          #+#    #+#              #
-#    Updated: 2026/11/23 11:50:19 by username         ###   ########.fr        #
+#    Updated: 2026/11/23 12:15:27 by username         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ RM = rm -f
 LIBFT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRC = src/push_swap.c src/ft_swap.c src/ft_push.c src/ft_error.c src/ft_parse_args.c \
-src/ft_reverse_rotate.c src/ft_rotate.c src/ft_stack_build.c \
-src/ft_stack_helpers.c src/ft_strategy.c
+SRC = src/push_swap.c src/ft_swap.c src/ft_push.c src/ft_error.c src/ft_parse_args.c\
+src/ft_reverse_rotate.c src/ft_rotate.c src/ft_stack_build.c\
+src/ft_stack_helpers.c src/ft_strategy.c src/ft_disorder.c\
 
 OBJ = $(SRC:.c=.o)
 
