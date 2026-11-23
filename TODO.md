@@ -9,7 +9,9 @@
 ## Done
 - [x]  0. Setup -> **jorgferr**
 - [x] 1. Input handling -> **luisdos**
-- [x] Stack initialization -> **luisdos**
+- [x] 2. Stack initialization -> **luisdos**
+- [x] 3. Stack operations -> **jorgferr/luisdos**
+- [x] 4. Disorder metric -> **jorgferr**
 ---
 
 ## Tasks
@@ -36,14 +38,14 @@
 - [x] Push: `pa`, `pb` - **jorgferr**
 - [x] Rotate: `ra`, `rb`, `rr` **luisdos**
 - [x] Reverse rotate: `rra`, `rrb`, `rrr` **luisdos**
-- [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
+- [x] Each operation outputs its name (see notes: sequence must be returned at the end)
 
 ### 4. Disorder metric
 - [x] Function that computes disorder of stack A (before any move)
 - [ ] Test: sorted gives 0, reversed gives 1
 
 ### 5. Sorting algorithms
-- [ ] Simple, O(n²): bubble sort adaptation
+- [x] Simple, O(n²): selection sort adaptation - **jorgferr**
 - [ ] Medium, O(n√n): chunk-based sorting (√n chunks)
 - [ ] Complex, O(n log n): radix sort (LSD or MSD)
 - [ ] Adaptive: picks the strategy from the disorder
