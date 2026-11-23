@@ -6,22 +6,12 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 10:29:28 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 18:48:50 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 10:00:25 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-<<<<<<< HEAD
-static int	ft_swap_top(t_stack **stack)
-{
-	t_stack	*first;
-	t_stack	*second;
-
-	if (!stack || !*stack || !(*stack)->next)
-		return (0);
-	first = *stack;
-=======
 void	ft_swap_top(t_stack *stack)
 {
 	t_node	*first;
@@ -30,7 +20,6 @@ void	ft_swap_top(t_stack *stack)
 	if (!stack || stack->size < 2)
 		return ;
 	first = stack->top;
->>>>>>> luisdos
 	second = first->next;
 	first->next = second->next;
 	if (first->next)
@@ -39,33 +28,6 @@ void	ft_swap_top(t_stack *stack)
 		stack->bottom = first;
 	second->prev = NULL;
 	second->next = first;
-<<<<<<< HEAD
-	*stack = second;
-	return (1);
-}
-
-void	sa(t_stack **a)
-{
-	if (ft_swap_top(a))
-		ft_printf("sa\n");
-}
-
-void	sb(t_stack **b)
-{
-	if (ft_swap_top(b))
-		ft_printf("sb\n");
-}
-
-void	ss(t_stack **a, t_stack **b)
-{
-	int	swap_a;
-	int	swap_b;
-
-	swap_a = ft_swap_top(a);
-	swap_b = ft_swap_top(b);
-	if (swap_a || swap_b)
-		ft_printf("ss\n");
-=======
 	first->prev = second;
 	stack->top = second;
 }
@@ -73,19 +35,18 @@ void	ss(t_stack **a, t_stack **b)
 void	ft_sa(t_stack *a)
 {
 	ft_swap_top(a);
-	ft_putendl_fd("sa", 1);
+	ft_printf("sa");
 }
 
 void	ft_sb(t_stack *b)
 {
 	ft_swap_top(b);
-	ft_putendl_fd("sb", 1);
+	ft_printf("sb");
 }
 
 void	ft_ss(t_stack *a, t_stack *b)
 {
 	ft_swap_top(a);
 	ft_swap_top(b);
-	ft_putendl_fd("ss", 1);
->>>>>>> luisdos
+	ft_printf("ss");
 }

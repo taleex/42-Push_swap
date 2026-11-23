@@ -5,33 +5,57 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/21 18:48:24 by username          #+#    #+#             */
-/*   Updated: 2026/11/21 19:02:43 by username         ###   ########.fr       */
+/*   Created: 2026/11/23 10:26:13 by username          #+#    #+#             */
+/*   Updated: 2026/11/23 10:29:50 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_push(t_stack **src, t_stack **dest)
+t_node	*ft_stack_pop_top(t_stack *stack)
 {
-	t_stack	*tmp;
+	t_node	*node;
 
-	if (!src || !dest || !*src)
+	if (!stack || !stack->size)
+		return (NULL);
+	node = stack->top;
+	stack->top = node->next;
+	if (stack->top)
+		stack->top->prev = NULL;
+	else
+		stack->bottom = NULL;
+	stack->size--;
+	node->next = NULL;
+	return (node);
+}
+
+void	ft_stack_push_top(t_stack *stack, t_node *node)
+{
+	node->prev = NULL;
+	node->next = stack->top;
+	if (stack->top)
+		stack->top->prev = node;
+	else
+		stack->bottom = node;
+	stack->top = node;
+	stack->size++;
+}
+
+static int	ft_push(t_stack *src, t_stack *dest)
+{
+	if (!src || !dest || !src->size)
 		return (0);
-	tmp = *src;
-	*src = (*src)->next;
-	tmp->next = *dest;
-	*dest = tmp;
+	ft_stack_push_top(dest, ft_stack_pop_top(src));
 	return (1);
 }
 
-void	pa(t_stack **a, t_stack **b)
+void	pa(t_stack *a, t_stack *b)
 {
 	if (ft_push(b, a))
 		ft_printf("pa\n");
 }
 
-void	pb(t_stack **a, t_stack **b)
+void	pb(t_stack *a, t_stack *b)
 {
 	if (ft_push(a, b))
 		ft_printf("pb\n");
