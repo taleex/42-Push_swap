@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 11:03:07 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 13:14:11 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:19:51 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 		ft_stack_clear(&b);
 		ft_error_exit();
 	}
+	ft_simple_sort(&a, &b);
 	ft_stack_clear(&a);
 	ft_stack_clear(&b);
 	return (0);

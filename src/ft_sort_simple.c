@@ -6,11 +6,40 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 13:37:22 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 14:25:18 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:23:31 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+static void	ft_bring_min_top(t_stack *a)
+{
+	t_node	*node;
+	t_node	*min;
+	int		i;
+	int		min_pos;
+
+	i = 0;
+	min_pos = 0;
+	node = a->top;
+	min = a->top;
+	while (node)
+	{
+		if (node->value < min->value)
+		{
+			min = node;
+			min_pos = i;
+		}
+		node = node->next;
+		i++;
+	}
+	if (min_pos <= a->size / 2)
+		while (a->top != min)
+			ft_ra(a);
+	else
+		while (a->top != min)
+			ft_rra(a);
+}
 
 static int	ft_is_simple_sort(t_stack *a)
 {
@@ -28,24 +57,17 @@ static int	ft_is_simple_sort(t_stack *a)
 	return (1);
 }
 
-void	ft_simple_sort(t_stack *a)
+void	ft_simple_sort(t_stack *a, t_stack *b)
 {
-	int	i;
-	int	j;
-
-	if (!a || a->size < 2)
+	if (!a || a->size < 2 || ft_is_simple_sort(a))
 		return ;
-	i = 0;
-	while (i < a->size && !ft_is_simple_sort(a))
+	while (a->size > 0)
 	{
-		j = 0;
-		while (j < a->size)
-		{
-			if (a->size >= 2 && a->top->value > a->top->next->value)
-				ft_sa(a);
-			ft_ra(a);
-			j++;
-		}
-		i++;
+		ft_bring_min_top(a);
+		ft_pb(a, b);
+	}
+	while (b->size > 0)
+	{
+		ft_pa(a, b);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 16:42:08 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 14:26:48 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:19:43 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void		ft_stack_clear(t_stack *stack);
 double		ft_disorder(t_stack *stack);
 
 //strategies
-void		ft_simple_sort(t_stack *a);
+void	ft_simple_sort(t_stack *a, t_stack *b);
 
 //Swap functions
 void		ft_swap_top(t_stack *stack);
