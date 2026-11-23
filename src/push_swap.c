@@ -2,12 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
-
 /*                                                    +:+ +:+         +:+     */
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/20 15:06:08 by username          #+#    #+#             */
-/*   Updated: 2026/11/20 15:07:39 by username         ###   ########.fr       */
+/*   Created: 2026/11/23 11:03:07 by username          #+#    #+#             */
+/*   Updated: 2026/11/23 11:03:09 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack	a;
-	t_stack	b;
+	t_stack		a;
+	t_stack		b;
 	t_options	options;
 
 	if (argc < 2)
