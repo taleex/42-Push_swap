@@ -12,6 +12,7 @@
 
 #include "../push_swap.h"
 
+<<<<<<< HEAD
 static int	ft_swap_top(t_stack **stack)
 {
 	t_stack	*first;
@@ -20,9 +21,25 @@ static int	ft_swap_top(t_stack **stack)
 	if (!stack || !*stack || !(*stack)->next)
 		return (0);
 	first = *stack;
+=======
+void	ft_swap_top(t_stack *stack)
+{
+	t_node	*first;
+	t_node	*second;
+
+	if (!stack || stack->size < 2)
+		return ;
+	first = stack->top;
+>>>>>>> luisdos
 	second = first->next;
 	first->next = second->next;
+	if (first->next)
+		first->next->prev = first;
+	else
+		stack->bottom = first;
+	second->prev = NULL;
 	second->next = first;
+<<<<<<< HEAD
 	*stack = second;
 	return (1);
 }
@@ -48,4 +65,27 @@ void	ss(t_stack **a, t_stack **b)
 	swap_b = ft_swap_top(b);
 	if (swap_a || swap_b)
 		ft_printf("ss\n");
+=======
+	first->prev = second;
+	stack->top = second;
+}
+
+void	ft_sa(t_stack *a)
+{
+	ft_swap_top(a);
+	ft_putendl_fd("sa", 1);
+}
+
+void	ft_sb(t_stack *b)
+{
+	ft_swap_top(b);
+	ft_putendl_fd("sb", 1);
+}
+
+void	ft_ss(t_stack *a, t_stack *b)
+{
+	ft_swap_top(a);
+	ft_swap_top(b);
+	ft_putendl_fd("ss", 1);
+>>>>>>> luisdos
 }

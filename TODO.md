@@ -8,7 +8,13 @@
 - [ ] 1. Input handling
 
 ## Done
+<<<<<<< HEAD
 - [x] 0. Setup -> **jorgferr**
+=======
+- [x] Makefile integration with ft_printf + libft -> **jorgferr**
+- [x] Input handling -> **luisdos**
+- [x] Stack initialization -> **luisdos**
+>>>>>>> luisdos
 ---
 
 ## Tasks
@@ -18,22 +24,30 @@
 - [x] Makefile (NAME, all, clean, fclean, re, builds libft too) **jorgferr**
 
 ### 1. Input handling
-- [ ] Error function: prints "Error\n" and exits
-- [ ] Check each arg is a valid integer
-- [ ] Check range (INT_MIN to INT_MAX)
-- [ ] Check duplicates
-- [ ] Parse optional flag (--simple, --medium, --complex, --adaptive); default is adaptive
+- [x] Error function: prints "Error\n" and exits - **luisdos**
+- [x] Check each arg is a valid integer - **luisdos**
+- [x] Check range (INT_MIN to INT_MAX) - **luisdos**
+- [x] Check duplicates - **luisdos**
+- [x] Parse optional flag (--simple, --medium, --complex, --adaptive); default is adaptive - **luisdos**
+- [x] Recognize benchmark - **luisdos**
 
 ### 2. Stack initialization
-- [ ] Build stack A from the arguments
-- [ ] Stack B starts empty
-- [ ] Free everything at exit (also on error)
+- [x] Build stack A from the arguments - **luisdos**
+- [x] Stack B starts empty - **luisdos**
+- [x] Free everything at exit (also on error) - **luisdos**
 
 ### 3. Stack operations (operations.c, or split into several files)
+<<<<<<< HEAD
 - [x] Swap: `sa`, `sb`, `ss` - **jorgferr**
 - [x] Push: `pa`, `pb` - **jorgferr**
 - [ ] Rotate: `ra`, `rb`, `rr`
 - [ ] Reverse rotate: `rra`, `rrb`, `rrr`
+=======
+- [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
+- [ ] Push: `pa`, `pb` - **jorgferr**
+- [x] Rotate: `ra`, `rb`, `rr` **luisdos**
+- [x] Reverse rotate: `rra`, `rrb`, `rrr` **luisdos**
+>>>>>>> luisdos
 - [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
 
 ### 4. Disorder metric
