@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 10:26:13 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 10:29:50 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 11:49:31 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ static int	ft_push(t_stack *src, t_stack *dest)
 	return (1);
 }
 
-void	pa(t_stack *a, t_stack *b)
+void	ft_pa(t_stack *a, t_stack *b)
 {
 	if (ft_push(b, a))
 		ft_printf("pa\n");
 }
 
-void	pb(t_stack *a, t_stack *b)
+void	ft_pb(t_stack *a, t_stack *b)
 {
 	if (ft_push(a, b))
 		ft_printf("pb\n");

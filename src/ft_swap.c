@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 10:29:28 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 10:00:25 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 11:50:46 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ void	ft_swap_top(t_stack *stack)
 void	ft_sa(t_stack *a)
 {
 	ft_swap_top(a);
-	ft_printf("sa");
+	ft_printf("sa\n");
 }
 
 void	ft_sb(t_stack *b)
 {
 	ft_swap_top(b);
-	ft_printf("sb");
+	ft_printf("sb\n");
 }
 
 void	ft_ss(t_stack *a, t_stack *b)
 {
 	ft_swap_top(a);
 	ft_swap_top(b);
-	ft_printf("ss");
+	ft_printf("ss\n");
 }

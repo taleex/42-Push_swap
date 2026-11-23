@@ -5,16 +5,11 @@
 
 ## Pending
 - [ ] 3. Stack operations
-- [ ] 1. Input handling
 
 ## Done
-<<<<<<< HEAD
-- [x] 0. Setup -> **jorgferr**
-=======
-- [x] Makefile integration with ft_printf + libft -> **jorgferr**
-- [x] Input handling -> **luisdos**
+- [x]  0. Setup -> **jorgferr**
+- [x] 1. Input handling -> **luisdos**
 - [x] Stack initialization -> **luisdos**
->>>>>>> luisdos
 ---
 
 ## Tasks
@@ -37,17 +32,10 @@
 - [x] Free everything at exit (also on error) - **luisdos**
 
 ### 3. Stack operations (operations.c, or split into several files)
-<<<<<<< HEAD
 - [x] Swap: `sa`, `sb`, `ss` - **jorgferr**
 - [x] Push: `pa`, `pb` - **jorgferr**
-- [ ] Rotate: `ra`, `rb`, `rr`
-- [ ] Reverse rotate: `rra`, `rrb`, `rrr`
-=======
-- [ ] Swap: `sa`, `sb`, `ss` - **jorgferr**
-- [ ] Push: `pa`, `pb` - **jorgferr**
 - [x] Rotate: `ra`, `rb`, `rr` **luisdos**
 - [x] Reverse rotate: `rra`, `rrb`, `rrr` **luisdos**
->>>>>>> luisdos
 - [ ] Each operation outputs its name (see notes: sequence must be returned at the end)
 
 ### 4. Disorder metric

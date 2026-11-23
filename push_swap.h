@@ -6,7 +6,7 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 16:42:08 by username          #+#    #+#             */
-/*   Updated: 2026/11/23 10:51:09 by username         ###   ########.fr       */
+/*   Updated: 2026/11/23 11:49:36 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,8 @@ void		ft_sb(t_stack *b);
 void		ft_ss(t_stack *a, t_stack *b);
 
 //Push functions
-void		pa(t_stack *a, t_stack *b);
-void		pb(t_stack *a, t_stack *b);
+void		ft_pa(t_stack *a, t_stack *b);
+void		ft_pb(t_stack *a, t_stack *b);
 
 //Rotate functions.
 void		ft_ra(t_stack *a);
