@@ -4,7 +4,8 @@
 - [ ] Agree on the structs in push_swap.h (everything depends on this) - both
 
 ## Pending
-- [ ] 3. Stack operations
+- [ ] 5. Sorting algorithms
+- [ ] 6. Delivery
 
 ## Done
 - [x]  0. Setup -> **jorgferr**
@@ -42,7 +43,7 @@
 
 ### 4. Disorder metric
 - [x] Function that computes disorder of stack A (before any move)
-- [ ] Test: sorted gives 0, reversed gives 1
+- [x] Test: sorted gives 0, reversed gives 1
 
 ### 5. Sorting algorithms
 - [x] Simple, O(n²): selection sort adaptation - **jorgferr**
@@ -83,7 +84,7 @@
 - Calculation: count the errors and divide (see the correction below).
 
 ### Required strategies
-1. Simple, O(n²) (at least one): bubble sort adaptation (chosen)
+1. Simple, O(n²): selection sort adaptation (minimum extraction chosen)
 2. Medium, O(n√n) (at least one): chunk-based sorting (√n chunks)
 3. Complex, O(n log n) (at least one): radix sort adaptation (LSD or MSD)
 4. Custom adaptive algorithm (our design):
