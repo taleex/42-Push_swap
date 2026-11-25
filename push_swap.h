@@ -6,7 +6,7 @@
 /*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 11:27:44 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/25 11:27:45 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/25 13:18:31 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ void		ft_stack_clear(t_stack *stack);
 double		ft_disorder(t_stack *stack);
 
 //strategies
-void	ft_simple_sort(t_stack *a, t_stack *b);
+void		ft_simple_sort(t_stack *a, t_stack *b);
+void		ft_sort_medium(t_stack *a, t_stack *b);
 
 //Swap functions
 void		ft_swap_top(t_stack *stack);
