@@ -6,7 +6,7 @@
 #    By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/25 11:27:34 by jorgferr          #+#    #+#              #
-#    Updated: 2026/11/26 14:35:41 by jorgferr         ###   ########.fr        #
+#    Updated: 2026/11/26 14:45:56 by jorgferr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,13 @@ RM = rm -f
 LIBFT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRCS = ft_disorder.c ft_parse_args.c ft_stack_helpers.c ft_error.c\
-ft_stack_build.c ft_strategy.c push_swap.c
+SRCS = ft_disorder.c ft_parse_args.c ft_error.c ft_strategy.c push_swap.c
 SRC_OPERATIONS = ft_push.c  ft_reverse_rotate.c  ft_rotate.c  ft_swap.c
 SRC_STRATEGY = ft_sort_medium.c  ft_sort_simple.c
+SRC_STACK = ft_stack_build.c  ft_stack_helpers.c
 
 SRC = $(addprefix src/, $(SRCS)) $(addprefix src/strategy/, $(SRC_STRATEGY))\
-$(addprefix src/operations/, $(SRC_OPERATIONS))
+$(addprefix src/operations/, $(SRC_OPERATIONS)) $(addprefix src/stack_utils/, $(SRC_STACK))
 
 OBJ = $(SRC:.c=.o)
 

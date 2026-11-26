@@ -6,11 +6,11 @@
 /*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 19:39:32 by luisdos           #+#    #+#             */
-/*   Updated: 2026/11/25 11:26:51 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:42:13 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
 int	ft_stack_build(t_stack *stack, char **numbers)
 {
