@@ -6,11 +6,11 @@
 /*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 14:12:00 by luisdos           #+#    #+#             */
-/*   Updated: 2026/11/25 11:27:08 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:26:49 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 static void	ft_reverse_rotate(t_stack *stack)
 {

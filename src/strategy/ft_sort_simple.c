@@ -6,11 +6,11 @@
 /*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 11:26:58 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/25 11:27:00 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:27:06 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 static void	ft_bring_min_top(t_stack *a)
 {

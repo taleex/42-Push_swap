@@ -6,11 +6,11 @@
 /*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 11:26:22 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/25 11:26:24 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:26:59 by jorgferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
 void	ft_swap_top(t_stack *stack)
 {

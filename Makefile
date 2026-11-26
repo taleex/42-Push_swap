@@ -6,7 +6,7 @@
 #    By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/25 11:27:34 by jorgferr          #+#    #+#              #
-#    Updated: 2026/11/25 11:27:36 by jorgferr         ###   ########.fr        #
+#    Updated: 2026/11/26 14:35:41 by jorgferr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,13 @@ RM = rm -f
 LIBFT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
-SRC = src/push_swap.c src/ft_swap.c src/ft_push.c src/ft_error.c src/ft_parse_args.c\
-src/ft_reverse_rotate.c src/ft_rotate.c src/ft_stack_build.c\
-src/ft_stack_helpers.c src/ft_strategy.c src/ft_disorder.c\
-src/ft_sort_simple.c
+SRCS = ft_disorder.c ft_parse_args.c ft_stack_helpers.c ft_error.c\
+ft_stack_build.c ft_strategy.c push_swap.c
+SRC_OPERATIONS = ft_push.c  ft_reverse_rotate.c  ft_rotate.c  ft_swap.c
+SRC_STRATEGY = ft_sort_medium.c  ft_sort_simple.c
+
+SRC = $(addprefix src/, $(SRCS)) $(addprefix src/strategy/, $(SRC_STRATEGY))\
+$(addprefix src/operations/, $(SRC_OPERATIONS))
 
 OBJ = $(SRC:.c=.o)
 
