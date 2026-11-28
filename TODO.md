@@ -47,7 +47,7 @@
 
 ### 5. Sorting algorithms
 - [x] Simple, O(n²): selection sort adaptation - **jorgferr**
-- [ ] Medium, O(n√n): chunk-based sorting (√n chunks)
+- [x] Medium, O(n√n): chunk-based sorting (√n chunks) - **jorgferr**
 - [ ] Complex, O(n log n): radix sort (LSD or MSD)
 - [ ] Adaptive: picks the strategy from the disorder
   - disorder < 0.2 -> simple
