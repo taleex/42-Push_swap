@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 11:26:29 by jorgferr          #+#    #+#             */
-/*   Updated: 2026/11/25 11:26:31 by jorgferr         ###   ########.fr       */
+/*   Updated: 2026/11/28 12:13:48 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 		ft_stack_clear(&b);
 		ft_error_exit();
 	}
-	ft_simple_sort(&a, &b);
+	ft_sort_medium(&a, &b);
 	ft_stack_clear(&a);
 	ft_stack_clear(&b);
 	return (0);
