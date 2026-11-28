@@ -6,21 +6,11 @@
 /*   By: username <username@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/28 11:33:31 by username          #+#    #+#             */
-/*   Updated: 2026/11/28 12:22:22 by username         ###   ########.fr       */
+/*   Updated: 2026/11/28 12:46:01 by username         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
-
-static int	ft_chunk_size(int size)
-{
-	int	i;
-
-	i = 1;
-	while (i < size / i)
-		i++;
-	return (i - 1);
-}
 
 static void	ft_index_stack(t_stack *stack)
 {
@@ -61,15 +51,40 @@ static void	ft_push_chunk(t_stack *a, t_stack *b, int start, int end)
 	}
 }
 
+static void	ft_bring_top_index(t_stack *b, int target)
+{
+	t_node	*node;
+	int		i;
+
+	node = b->top;
+	i = 0;
+	while (node->index != target)
+	{
+		node = node->next;
+		i++;
+	}
+	if (i > b->size / 2)
+		i = i - (b->size);
+	while (i > 0)
+	{
+		ft_rb(b);
+		i--;
+	}
+	while (i < 0)
+	{
+		ft_rrb(b);
+		i++;
+	}
+}
+
 static void	ft_push_back(t_stack *a, t_stack *b)
 {
 	int	target;
 
 	while (b->size > 0)
 	{
-		target = b->size -1;
-		while (b->top->index != target)
-			ft_rb(b);
+		target = b->size - 1;
+		ft_bring_top_index(b, target);
 		ft_pa(a, b);
 	}
 }
@@ -83,8 +98,11 @@ void	ft_sort_medium(t_stack *a, t_stack *b)
 
 	if (!a || !b || a->size < 2)
 		return ;
-	chunk_size = ft_chunk_size(a->size);
 	size = a->size;
+	chunk_size = 1;
+	while (chunk_size <= size / chunk_size)
+		chunk_size++;
+	chunk_size--;
 	start = 0;
 	ft_index_stack(a);
 	while (start < size)
