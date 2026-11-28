@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jorgferr <jorgferr@student.42.fr>          +#+  +:+       +#+         #
+#    By: username <username@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/25 11:27:34 by jorgferr          #+#    #+#              #
-#    Updated: 2026/11/26 14:45:56 by jorgferr         ###   ########.fr        #
+#    Updated: 2026/11/28 15:59:20 by username         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ LIBFTPRINTF = $(LIBFT_PRINTF_DIR)/libftprintf.a
 
 SRCS = ft_disorder.c ft_parse_args.c ft_error.c ft_strategy.c push_swap.c
 SRC_OPERATIONS = ft_push.c  ft_reverse_rotate.c  ft_rotate.c  ft_swap.c
-SRC_STRATEGY = ft_sort_medium.c  ft_sort_simple.c
+SRC_STRATEGY = ft_sort_medium.c  ft_sort_simple.c ft_sort_complex.c\
+ft_sort_utils.c
 SRC_STACK = ft_stack_build.c  ft_stack_helpers.c
 
 SRC = $(addprefix src/, $(SRCS)) $(addprefix src/strategy/, $(SRC_STRATEGY))\
